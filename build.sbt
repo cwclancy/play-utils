@@ -8,5 +8,6 @@ lazy val `play-utils` = project
   .settings(
     name := "play-utils",
     scalaVersion := ScalaVersions.scala212,
-    crossScalaVersions := Seq(ScalaVersions.scala212, ScalaVersions.scala213)
+    crossScalaVersions := Seq(ScalaVersions.scala212, ScalaVersions.scala213),
+    releaseCrossBuild := true
   )
