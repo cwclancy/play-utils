@@ -1,5 +1,3 @@
-import interplay.ScalaVersions
-
 playBuildRepoName in ThisBuild := "play-utils"
 
 lazy val `play-utils` = project
@@ -7,7 +5,8 @@ lazy val `play-utils` = project
   .enablePlugins(PlayLibrary)
   .settings(
     name := "play-utils",
-    scalaVersion := ScalaVersions.scala212,
-    crossScalaVersions := Seq(ScalaVersions.scala212, ScalaVersions.scala213),
+    scalaVersion := "2.12.1",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+    crossScalaVersions := Seq("2.11.8", "2.12.1"),
     releaseCrossBuild := true
   )
